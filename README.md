@@ -27,3 +27,8 @@ apt install maven -y
 
 Follow official Jenkins documentation
 👉 [Jenkins Installation](https://www.jenkins.io/doc/book/installing/linux/)
+
+### Install AWS Cli
+```sh
+snap install aws-cli --classic
+```
