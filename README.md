@@ -60,3 +60,10 @@ docker run -d --name sonarqube-custom -p 9000:9000 sonarqube:10.6-community
 ```sh
 docker ps
 ```
+## 4. Access Jenkins & SonarQube
+- Jenkins: `http://<jenkins-public-ip>:8080`
+- SonarQube: `http://<sonarqube-public-ip>:9000`
+    - Login SonarQube with:
+        - Username: `admin`
+        - Password: `admin`
+        - Change the default password after first login.
