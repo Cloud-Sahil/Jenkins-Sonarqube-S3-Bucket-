@@ -37,4 +37,26 @@ snap install aws-cli --classic
 su - jenkins
 ```
 ### Aws Configure
-### cat /var/lib/jenkins/secrets/initialAdminPassword
+
+## 3. Setup SonarQube EC2 Server
+
+### Go To Root 
+```sh
+sudo -i
+```
+
+### Update Instance
+```sh
+apt update
+```
+### Install Docker
+```bash
+apt install docker.io -y
+```
+### Run SonarQube
+```bash
+docker run -d --name sonarqube-custom -p 9000:9000 sonarqube:10.6-community
+```
+```sh
+docker ps
+```
