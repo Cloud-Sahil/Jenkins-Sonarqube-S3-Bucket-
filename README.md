@@ -60,7 +60,10 @@ docker run -d --name sonarqube-custom -p 9000:9000 sonarqube:10.6-community
 ```sh
 docker ps
 ```
-## 4. Access Jenkins & SonarQube
+## 4. Create S3 Bucket
+- Name: `easycrud-artifact-bucket`
+  
+## 5. Access Jenkins & SonarQube
 - Jenkins: `http://<jenkins-public-ip>:8080`
 - SonarQube: `http://<sonarqube-public-ip>:9000`
     - Login SonarQube with:
@@ -68,7 +71,7 @@ docker ps
         - Password: `admin`
         - Change the default password after first login.
           
-## 5. Configure SonarQube
+## 6. Configure SonarQube
 
 1. Create Webhook
     - Go to: **Administration** → **Configuration** → **Webhooks** → **Create**
@@ -83,7 +86,7 @@ docker ps
     - Generate **token** → **Copy** & save it
     - Select **Maven** as build tool → Copy the given command
 
-## 6. Configure Jenkins
+## 7. Configure Jenkins
 ### 1. Install Plugin
   - Dashboard → Manage Jenkins → Plugins → Available Plugins
   - Install: **SonarQube Scanner for Jenkins**
@@ -104,7 +107,7 @@ docker ps
   - Save changes
 **Note (optional)**: After configuring, restart the Jenkins server to ensure it operates smoothly. (http://<jenkins-public-ip>:8080/restart)
 
-## 7. Create Jenkins Pipeline
+## 8. Create Jenkins Pipeline
 1. Go to Dashboard → New Item → Pipeline
 2. Paste the following pipeline code:
 ```sh
@@ -159,6 +162,6 @@ pipeline {
 
 ```
 
-## 8. Run the Pipeline
+## 9. Run the Pipeline
 - Build the job in Jenkins.
 - Check results in SonarQube Dashboard.
