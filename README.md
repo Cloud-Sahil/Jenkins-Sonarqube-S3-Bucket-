@@ -32,3 +32,9 @@ Follow official Jenkins documentation
 ```sh
 snap install aws-cli --classic
 ```
+### Jenkins 
+```sh
+su - jenkins
+```
+### Aws Configure
+### cat /var/lib/jenkins/secrets/initialAdminPassword
